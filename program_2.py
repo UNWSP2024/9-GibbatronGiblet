@@ -7,7 +7,7 @@
 def main():
     random_n_count = amount_of_random()
     random_number_generator(random_n_count)
-
+    print(f'You have written {random_n_count} random numbers to numbers.txt')
 def amount_of_random():
     while True:
         try:
@@ -22,11 +22,10 @@ def amount_of_random():
 def random_number_generator(random_count):
     import random
     number_file = open('numbers.txt','w')
-    count = random_count
-    while count > 0:
+    while random_count > 0:
         random_n = random.randint(1,500)
         number_file.write(str(random_n) + '\n')
-        count -= 1
+        random_count -= 1
     number_file.close()
 if __name__ == '__main__':
     main()
