@@ -10,10 +10,41 @@
 # are converted to a number.
 def sum_numbers_from_file():
     ######################
-    # Add your code here #
-    ######################
-    print('In the sum_numbers_from_file function')
+    while True:
+        try:
+            infile = open('numbers.txt', 'r')
+            sum = 0
+            line = infile.readline()
+            for line in infile:
+                sum += float(line)
+            print(f'The sum of numbers from the file is {sum}')
+            infile.close()
+            break
 
+        except IOError or FileNotFoundError:
+            print("""There was trouble accessing the file.
+            Please make sure that numbers.txt is accessible.""")
+            try_again = str(input("Type '1' if you want to try again. Type anything else to quit:"))
+            if try_again == '1':
+                pass
+            else:
+                break
+
+
+        except ValueError:
+            print("""A value error occurred. 
+            Please make sure that numbers.txt only contains numbers.""")
+            try_again = str(input("Type '1' if you want to try again. Type anything else to quit:"))
+            if try_again == '1':
+                pass
+            else:
+                break
+
+
+    ######################
 # You don't need to change anything below this line:
 if __name__ == '__main__':
     sum_numbers_from_file()
+
+#This program was written by Logan Gibson on 10/31/25
+#Its name is "Mean Calculator"
