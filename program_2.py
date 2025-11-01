@@ -31,4 +31,4 @@ if __name__ == '__main__':
     main()
 
 #This program was written by Logan Gibson on 10/31/25
-#Its name is "Line Counter"
+#Its name is "Random Number Writer"

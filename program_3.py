@@ -30,7 +30,6 @@ def sum_numbers_from_file():
             else:
                 break
 
-
         except ValueError:
             print("""A value error occurred. 
             Please make sure that numbers.txt only contains numbers.""")
@@ -47,4 +46,4 @@ if __name__ == '__main__':
     sum_numbers_from_file()
 
 #This program was written by Logan Gibson on 10/31/25
-#Its name is "Mean Calculator"
+#Its name is "Sum Calculator"
