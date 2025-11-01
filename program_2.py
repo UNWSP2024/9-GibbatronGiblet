@@ -21,7 +21,7 @@ def amount_of_random():
 
 def random_number_generator(random_count):
     import random
-    number_file = open('numbers.txt','w')
+    number_file = open('random_numbers.txt','w')
     while random_count > 0:
         random_n = random.randint(1,500)
         number_file.write(str(random_n) + '\n')
