@@ -13,8 +13,8 @@ def sum_numbers_from_file():
     while True:
         try:
             infile = open('numbers.txt', 'r')
-            sum = 0
             line = infile.readline()
+            sum = int(line)
             for line in infile:
                 sum += int(line)
             print(f'The sum of numbers from the file is {sum}')
