@@ -16,7 +16,7 @@ def sum_numbers_from_file():
             sum = 0
             line = infile.readline()
             for line in infile:
-                sum += float(line)
+                sum += int(line)
             print(f'The sum of numbers from the file is {sum}')
             infile.close()
             break
